@@ -4,7 +4,7 @@
 
 This n8n workflow automatically reads incoming Gmail messages, verifies the sender, runs the email content through an AI Agent (Google Gemini + Postgres-backed chat memory) for classification/structured extraction, cross-references a Google Sheet, and then either logs the result, raises an alert, or halts with an error — depending on how each validation step resolves.It also adds the data to the Google sheets, removing manual entry and saving a lot of time and improving productivity.
 
-![Workflow diagram](images/image1.png)
+![Workflow diagram](image1.png)
 
 ## Flow Summary
 
