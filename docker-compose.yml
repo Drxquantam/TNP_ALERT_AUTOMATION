@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  n8n:
+    build: .
+    ports:
+      - "5678:5678"
+    environment:
+      - GENERIC_TIMEZONE=Asia/Kolkata
+      - TZ=Asia/Kolkata
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_RUNNERS_ENABLED=true
+      - NODE_FUNCTION_ALLOW_EXTERNAL=openpgp
+      - NODE_PATH=/opt/custom-modules/node_modules
+      - N8N_RUNNERS_STDLIB_ALLOW=*
+      - N8N_RUNNERS_EXTERNAL_ALLOW=pandas,numpy,boto3,gnupg
+      - N8N_RUNNERS_ALLOW_TRANSITIVE_IMPORTS=true
+    volumes:
+      - n8n_data:/home/node/.n8n
+    restart: unless-stopped
+
+volumes:
+  n8n_data:
+
