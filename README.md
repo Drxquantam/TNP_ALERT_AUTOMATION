@@ -56,8 +56,5 @@ The workflow has three dedicated failure points:
 - **Stop and Error** — triggered when the sender check fails.
 - **Stop and Error2** — triggered when the AI Agent's output doesn't pass `If1`'s validation.
 - **Stop and Error1** — triggered when the final merged-data check (`If`) fails.
-
-## Notes
-
-- The exact routing into the **Merge** node's two inputs and the final **If → Send an Alert** path was read directly off the diagram; double-check these connections in the actual n8n canvas before relying on this document, since a few crossing lines were hard to disambiguate visually.
-- Update this README if node names, credentials, or branch logic change.
+## Build by - 
+## DHRUV.R
